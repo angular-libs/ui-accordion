@@ -1,6 +1,6 @@
 'use strict';
 (function(){
-  angular.module('nbAriaUiApp')
+  angular.module('uiAccordion')
   .directive('ngAccordion',function ($q,$log) {
     return {
       restrict: 'EA',
