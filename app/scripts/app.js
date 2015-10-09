@@ -1,5 +1,6 @@
 'use strict';
 (function(){
+  angular.module('uiAccordion',[]);
   angular.module('uiAccordion')
   .directive('ngAccordion',function ($q,$log) {
     return {
