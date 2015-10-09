@@ -1,0 +1,35 @@
+{
+  "name": "ui-accordion",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "^1.3.0"
+  },
+  "main": "dist/scripts/ui-accordion.js",
+  "devDependencies": {
+    "angular-mocks": "^1.3.0"
+  },
+  "appPath": "app",
+  "moduleName": "uiGrid",
+  "homepage": "https://github.com/kuldeepkeshwar/ui-accordion",
+  "authors": [
+    "Kuldeep Keshwar <kuldeepkeshwar@gmail.com>"
+  ],
+  "description": "ui-accordion for angular js",
+  "keywords": [
+    "ui-accordion",
+    "angularjs",
+    "accordion"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kuldeepkeshwar/ui-accordion.git"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
