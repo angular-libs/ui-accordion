@@ -1,0 +1,27 @@
+<div class="row">
+    <h3>simple accordion</h3>
+    <ul ng-accordion options="simpleAccordionOptions">
+        <li ng-accordion-group options="accordionGroupOptions1">
+            <h2 ng-accordion-heading>Heading {{i}}</h2>
+            <div ng-accordion-body>Body {{i}}</div>
+        </li>
+        <li ng-accordion-group options="accordionGroupOptions2">
+            <h2 ng-accordion-heading>Heading 2</h2>
+            <div ng-accordion-body>Body 2</div>
+        </li>
+        <li ng-accordion-group options="accordionGroupOptions3">
+            <h2 ng-accordion-heading>Heading 3</h2>
+            <div ng-accordion-body>Body 3</div>
+        </li>
+        <li ng-accordion-group>
+            <h2 ng-accordion-heading>Heading 4</h2>
+            <div ng-accordion-body>Body 4</div>
+        </li>
+    </ul>
+    <div>
+        <input type="checkbox" ng-model="accordionGroupOptions1.open" >1st Opened</input>
+        <input type="checkbox" ng-model="accordionGroupOptions2.open" >2nd  Opened</input>
+        <input type="checkbox" ng-model="accordionGroupOptions3.open" >3rd  Opened</input>
+        <input type="checkbox" ng-model="simpleAccordionOptions.closeOthers" >Close others</input>
+    </div>
+</div>
