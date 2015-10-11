@@ -3,7 +3,7 @@
 describe('Controller: MainCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('uiGridApp'));
+  beforeEach(module('uiAccordion'));
 
   var MainCtrl,
     scope;
