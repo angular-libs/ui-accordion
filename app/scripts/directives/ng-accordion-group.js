@@ -19,11 +19,9 @@ function noopPromise(){
 function AccordionGroup(){
 
 }
-AccordionGroup.prototype.beforeOpen=noopPromise;
-AccordionGroup.prototype.beforeHide=noopPromise;
 AccordionGroup.prototype.down=function(animationFn){
   var _self=this;
-  _self.beforeOpen().then(function(){
+  _self.options.beforeOpen().then(function(){
     _self.body[animationFn]('slow');//slideDown
     _self.options.open=true;
   },function(error){
@@ -32,7 +30,7 @@ AccordionGroup.prototype.down=function(animationFn){
 };
 AccordionGroup.prototype.up=function(animationFn){
   var _self=this;
-  _self.beforeHide().then(function(){
+  _self.options.beforeHide().then(function(){
     _self.options.open=false;
     _self.body[animationFn]();//slideUp
   },function(error){
@@ -42,7 +40,9 @@ AccordionGroup.prototype.up=function(animationFn){
 function defaultAccordionGroupOptions(){
   return {
       open:false,
-      disabled:false
+      disabled:false,
+      beforeOpen:noopPromise,
+      beforeHide:noopPromise
     }
 }
 angular.module('uiAccordion')
