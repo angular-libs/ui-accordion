@@ -1,5 +1,5 @@
 angular.module('myApp',['uiAccordion']);
-angular.module('myApp').controller("myCtrl",function($scope){
+angular.module('myApp').controller("myCtrl",function($scope,$q){
 
     $scope.simpleAccordionOptions={
         closeOthers:false  //Default: true) - Control whether expanding an item will cause the other items to close.
@@ -18,7 +18,7 @@ angular.module('myApp').controller("myCtrl",function($scope){
             // busy doing some stuff
             setTimeout(function(){
                 def.resolve();
-            },3000)
+            },2000)
             return def.promise;
         },
         beforeHide:function(){  //promise which is resolved before hidding accordion body
@@ -26,7 +26,7 @@ angular.module('myApp').controller("myCtrl",function($scope){
             // busy doing some stuff
             setTimeout(function(){
                 def.resolve();
-            },3000)
+            },1500)
             return def.promise;
         }
     }
