@@ -2,22 +2,22 @@
     <meta charset="UTF-8">
     <title>ui-accordion by kuldeepkeshwar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="//favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="//favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="//favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="//favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="//favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="//favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="//favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="//favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="//favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="//favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="//favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="//favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="//favicon/favicon-16x16.png">
+    <link rel="manifest" href="//manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="//favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
@@ -212,7 +212,7 @@ angular.module(<span class="pl-s"><span class="pl-pds">'</span>myApp<span class=
     height: 326px;
 "></iframe></div>
     <ul>
-        <li>Nested Accordions </li>
+        <li>Nested Accordions</li>
     </ul>
 
     <h4>
@@ -250,8 +250,87 @@ angular.module(<span class="pl-s"><span class="pl-pds">'</span>myApp<span class=
 "><iframe src="examples/nested-accordion.html" style="
     width: 100%;
     border: 0px;
-    height: 600px;
-"></iframe></div>
+    height: 500px;
+"></iframe></div><div style="
+"><ul style="font-size: 17.6px; line-height: 26.4px;"><li>Animated Accordion</li></ul><h4 style="font-size: 17.6px; line-height: 26.4px;"><a id="html-2" class="anchor" href="#html-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>HTML</h4><div class="highlight highlight-text-html-basic"><pre>&lt;div ng-controller="myCtrl"&gt;
+    &lt;div class="container"&gt;
+        &lt;h1 class="heading-primary"&gt;Animated Accordion&lt;/h1&gt;
+        &lt;div class="accordion"&gt;
+            &lt;dl ng-accordion&gt;
+                &lt;div ng-accordion-group options="accordionGroupOptions1"&gt;
+                    &lt;dt ng-accordion-heading&gt;
+                        &lt;a class="accordion-title accordionTitle "&gt;First Accordion heading&lt;/a&gt;
+                    &lt;/dt&gt;
+                    &lt;dd class="accordion-content accordionItem is-collapsed" ng-accordion-body&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. &lt;/p&gt;
+                        &lt;/dd&gt;
+                &lt;/div&gt;
+                &lt;div ng-accordion-group options="accordionGroupOptions2"&gt;
+                    &lt;dt ng-accordion-heading&gt;
+                        &lt;a class="accordion-title accordionTitle " &gt;
+                            Second Accordion heading&lt;/a&gt;
+                    &lt;/dt&gt;
+                    &lt;dd class="accordion-content accordionItem is-collapsed" ng-accordion-body&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. &lt;/p&gt;
+                        &lt;/dd&gt;
+                &lt;/div&gt;
+                &lt;div ng-accordion-group options="accordionGroupOptions3"&gt;
+                    &lt;dt ng-accordion-heading&gt;
+                        &lt;a class="accordion-title accordionTitle " &gt;
+                            Third Accordion heading
+                        &lt;/a&gt;
+                    &lt;/dt&gt;
+                    &lt;dd class="accordion-content accordionItem is-collapsed" ng-accordion-body&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris. &lt;/p&gt;
+                        &lt;/dd&gt;
+                &lt;/div&gt;
+            &lt;/dl&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre></div><h5><a id="code-2" class="anchor" href="#code-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>CODE</h5><div class="highlight highlight-source-js"><pre>angular.module('myApp', ['uiAccordion']);
+angular.module('myApp').controller("myCtrl", function ($scope) {
+    function animate(isOpen){
+        var body=$(this.body),header=$(this.header);
+        if(isOpen){
+            header.find('a').addClass('is-collapsed');
+            header.find('a').addClass('is-expanded');
+            body.removeClass('is-collapsed');
+            body.addClass('is-expanded');
+            body.addClass('animateIn')
+        }else{
+            header.find('a').removeClass('is-collapsed');
+            header.find('a').removeClass('is-expanded');
+            body.addClass('is-collapsed');
+            body.removeClass('is-expanded');
+            body.removeClass('animateIn')
+        }
+    }
+    $scope.accordionGroupOptions1 = {
+        animateOpen:function(){
+            // this here refers to AccordionGroup object which has header,body and options
+            animate.call(this,true);
+        },
+        animateClose:function(){
+            animate.call(this,false);
+        }
+    };
+    $scope.accordionGroupOptions2 = {
+        animateOpen:function(){
+            animate.call(this,true);
+        },
+        animateClose:function(){
+            animate.call(this,false);
+        }
+    };
+    $scope.accordionGroupOptions3 = {
+        animateOpen:function(){
+            animate.call(this,true);
+        },
+        animateClose:function(){
+            animate.call(this,false);
+        }
+    }
+});</pre></div><div style="font-size: 17.6px; line-height: 26.4px;"><iframe src="http://rawgit.com/kuldeepkeshwar/ui-accordion/master/examples/simple-accordion-with-animation-options.html" style="width: 100%; border-width: 0px; border-style: initial; height: 600px;"></iframe></div></div>
 
     <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/kuldeepkeshwar/ui-accordion">ui-accordion</a> is maintained by <a href="https://github.com/kuldeepkeshwar">kuldeepkeshwar</a>.</span>
@@ -259,8 +338,5 @@ angular.module(<span class="pl-s"><span class="pl-pds">'</span>myApp<span class=
     </footer>
 
 </section>
-
-
-
 
 </body></html>
