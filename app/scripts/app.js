@@ -32,7 +32,9 @@
             open: false,
             disabled: false,
             beforeOpen: noopPromise,
-            beforeHide: noopPromise
+            beforeHide: noopPromise,
+            animateOpen:angular.noop,
+            animateClose:angular.noop
         }
     }
 
@@ -46,7 +48,11 @@
     AccordionGroup.prototype.show = function (animationFn) {
         var _self = this;
         getService('$q').when(_self.options.beforeOpen()).then(function () {
-            _self.body[animationFn]('slow');//slideDown
+            if(_self.options.animateOpen==angular.noop){
+                _self.body[animationFn]('slow');//slideDown
+            }else{
+                _self.options.animateOpen.call(_self);
+            }
         }, function (error) {
             getService('$log').error(error);
         })
@@ -54,7 +60,11 @@
     AccordionGroup.prototype.hide = function (animationFn) {
         var _self = this;
         getService('$q').when(_self.options.beforeHide()).then(function () {
-            _self.body[animationFn]();//slideUp
+            if(_self.options.animateClose==angular.noop){
+                _self.body[animationFn]();//slideUp
+            }else{
+                _self.options.animateClose.call(_self);
+            }
         }, function (error) {
             getService('$log').error(error);
         })
