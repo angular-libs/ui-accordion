@@ -14,6 +14,7 @@ module.exports = function (grunt) {
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
+  grunt.loadNpmTasks('grunt-angular-architecture-graph');
 
   // Configurable paths for the application
   var appConfig = {
@@ -26,7 +27,13 @@ module.exports = function (grunt) {
 
     // Project settings
     yeoman: appConfig,
-
+    angular_architecture_graph: {
+      diagram: {
+        files: {
+          '<%= yeoman.app %>/Architecture': ['<%= yeoman.app %>/scripts/{,*/}*.js']
+        }
+      }
+    },
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -402,7 +409,12 @@ module.exports = function (grunt) {
     'uglify',
     //'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'angular_architecture_graph'
+  ]);
+
+  grunt.registerTask('architecture-graph', [
+    'angular_architecture_graph'
   ]);
 
   grunt.registerTask('default', [

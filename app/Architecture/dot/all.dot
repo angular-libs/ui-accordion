@@ -1,0 +1,97 @@
+digraph dependencies {
+  node[shape="component",style="filled",colorscheme=paired12]
+
+    node[shape="component"]
+    
+      "uiAccordion"[label="uiAccordion", color=1]
+    
+
+    
+      
+    
+
+    node[shape="ellipse"]
+
+
+    
+      
+
+      
+
+      
+
+      
+
+
+      node[shape="cds"]
+
+      
+
+      
+        "ngAccordion"[label="ngAccordion", color=3]
+      
+        "ngAccordionGroup"[label="ngAccordionGroup", color=3]
+      
+        "ngAccordionBody"[label="ngAccordionBody", color=3]
+      
+        "ngAccordionHeading"[label="ngAccordionHeading", color=3]
+      
+
+
+
+
+
+      node[shape="ellipse"]
+      
+
+      
+        "uiAccordion" -> "ngAccordion"
+      
+        "uiAccordion" -> "ngAccordionGroup"
+      
+        "uiAccordion" -> "ngAccordionBody"
+      
+        "uiAccordion" -> "ngAccordionHeading"
+      
+
+      
+
+      
+
+      
+
+      
+
+
+
+
+
+
+
+
+
+
+
+      node[shape="ellipse",style="filled", color=8]
+      
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+    
+}
