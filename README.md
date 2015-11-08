@@ -1,6 +1,6 @@
 
 # ui-accordion
-
+[![Build Status](https://travis-ci.org/kuldeepkeshwar/ui-accordion.svg?branch=master)](https://travis-ci.org/kuldeepkeshwar/ui-accordion)
 ## simple accordion in angular js
 
 #Installing
