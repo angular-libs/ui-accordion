@@ -27,13 +27,28 @@
     "grunt-wiredep": "^2.0.0",
     "jit-grunt": "^0.9.1",
     "jshint-stylish": "^1.0.0",
-    "karma": "^0.13.14",
-    "time-grunt": "^1.0.0"
+    "time-grunt": "^1.0.0",
+
+    "grunt-jsinspect": "^1.0.0",
+    "grunt-bump": "^0.6.0",
+
+    "jasmine-core": "^2.3.4",
+    "phantomjs": "^1.9.18",
+    "grunt-istanbul-coverage": "^0.1.1",
+    "grunt-karma": "*",
+    "karma-coverage": "^0.5.3",
+    "karma-jasmine": "*",
+    "karma-phantomjs-launcher": "*"
   },
   "engines": {
     "node": ">=0.10.0"
   },
   "dependencies": {
+    "codecov.io": "^0.1.6",
     "load-grunt-tasks": "^3.3.0"
+  },
+  "scripts": {
+    "test": "grunt default",
+    "ci": "npm test && codecov coverage/cobertura/cobertura-coverage.xml --token=691a6715-555f-490c-9808-85c3ea4e0430"
   }
 }
