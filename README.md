@@ -2,8 +2,8 @@
 # ui-accordion
 [![Build Status](https://travis-ci.org/kuldeepkeshwar/ui-accordion.svg?branch=master)](https://travis-ci.org/kuldeepkeshwar/ui-accordion)
 [![Dependency Status](https://gemnasium.com/kuldeepkeshwar/ui-accordion.svg)](https://gemnasium.com/kuldeepkeshwar/ui-accordion)
-[![Code Climate](https://codeclimate.com/github/kuldeepkeshwar/ui-accordion/badges/gpa.svg)](https://codeclimate.com/github/kuldeepkeshwar/ui-accordion)
-[![Test Coverage](https://codeclimate.com/github/kuldeepkeshwar/ui-accordion/badges/coverage.svg)](https://codeclimate.com/github/kuldeepkeshwar/ui-accordion/coverage)
+<a href="https://codeclimate.com/github/kuldeepkeshwar/ui-accordion"><img src="https://codeclimate.com/github/kuldeepkeshwar/ui-accordion/badges/gpa.svg" /></a>
+<a href="https://codeclimate.com/github/kuldeepkeshwar/ui-accordion/coverage"><img src="https://codeclimate.com/github/kuldeepkeshwar/ui-accordion/badges/coverage.svg" /></a>
 [![Bower version](https://badge.fury.io/bo/ui-accordion.svg)](https://badge.fury.io/bo/ui-accordion)
 ## simple accordion in angular js
 

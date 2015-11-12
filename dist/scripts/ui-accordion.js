@@ -33,56 +33,58 @@
             disabled: false,
             beforeOpen: noopPromise,
             beforeHide: noopPromise,
-            animateOpen:angular.noop,
-            animateClose:angular.noop
-        }
+            animateOpen: function (animationFn) {
+                this.body[animationFn]('slow');
+            },
+            animateClose: function (animationFn) {
+                this.body[animationFn]();
+            }
+        };
     }
 
     function Accordion() {
         this.groups = [];
         this.options = {
             closeOthers: true
-        }
+        };
     }
 
-    AccordionGroup.prototype.show = function (animationFn) {
+    function errorlogger(error) {
+        getService('$log').error(error);
+    }
+
+    AccordionGroup.prototype.$animate = function (animationFn, action, callback) {
         var _self = this;
-        getService('$q').when(_self.options.beforeOpen()).then(function () {
-            if(_self.options.animateOpen==angular.noop){
-                _self.body[animationFn]('slow');//slideDown
-            }else{
-                _self.options.animateOpen.call(_self);
-            }
-        }, function (error) {
-            getService('$log').error(error);
-        })
+        getService('$q').when(_self.options[action]()).then(function () {
+            _self.options[callback].call(_self, animationFn);
+        }, errorlogger);
     };
-    AccordionGroup.prototype.hide = function (animationFn) {
-        var _self = this;
-        getService('$q').when(_self.options.beforeHide()).then(function () {
-            if(_self.options.animateClose==angular.noop){
-                _self.body[animationFn]();//slideUp
-            }else{
-                _self.options.animateClose.call(_self);
-            }
-        }, function (error) {
-            getService('$log').error(error);
-        })
-    };
+    //AccordionGroup.prototype.show = function (animationFn) {
+    //    var _self = this;
+    //    getService('$q').when(_self.options.beforeOpen()).then(function () {
+    //        _self.options.animateOpen.call(_self,animationFn);
+    //    }, errorlogger );
+    //};
+    //AccordionGroup.prototype.hide = function (animationFn) {
+    //    var _self = this;
+    //    getService('$q').when(_self.options.beforeHide()).then(function () {
+    //        _self.options.animateClose.call(_self,animationFn);
+    //    }, errorlogger);
+    //};
 
     Accordion.prototype.addGroup = function (group) {
         this.groups.push(group);
     };
-    Accordion.prototype.getGroups = function (group) {
+    Accordion.prototype.getGroups = function () {
         return this.groups;
     };
     Accordion.prototype.applyState = function (group) {
         if (group) {
             if (group.options.open) {
-                group.show('slideDown');
+                group.$animate('slideDown', 'beforeOpen', 'animateOpen');
                 this.closeOthers(group);
             } else {
-                group.hide('slideUp');
+                group.$animate('slideUp', 'beforeHide', 'animateClose');
             }
         }
 
@@ -90,10 +92,10 @@
     Accordion.prototype.closeOthers = function (group) {
         if (this.options.closeOthers) {
             for (var a = 0; a < this.groups.length; a++) {
-                if (group == this.groups[a]) {
+                if (group === this.groups[a]) {
 
                 } else {
-                    this.groups[a].hide('slideUp');
+                    this.groups[a].hide('slideUp', 'beforeHide', 'animateClose');
                 }
             }
         }
@@ -102,7 +104,7 @@
         return new Accordion();
     }
 
-    var _ngAccordion = function ($q, $log) {
+    var _ngAccordion = function () {
         return {
             restrict: 'A',
             link: function (scope, element, attrs, controller) {
@@ -114,7 +116,7 @@
                     if (n && n !== o) {
                         angular.extend(controller.accordion.options, n);
                     }
-                })
+                });
             },
             controller: function () {
                 this.accordion = getDefaultAccordion();
@@ -140,13 +142,13 @@
                 };
                 this.getBodyElement = function () {
                     return bodyDef.promise;
-                }
+                };
             },
             scope: {
                 options: '='
             },
             link: function (scope, element, attrs, controllers) {
-                var accordionCtrl, controller, accordion, accordionGroup, options;
+                var accordionCtrl, controller, accordion, accordionGroup;
                 controller = controllers[1];
                 accordionCtrl = controllers[0];
                 accordion = accordionCtrl.accordion;
@@ -156,7 +158,7 @@
                 }
                 accordionGroup.options = angular.extend(defaultAccordionGroupOptions(), scope.options);
 
-                scope.$watchCollection('options', function (n, o) {
+                scope.$watchCollection('options', function (n) {
                     accordionGroup.options = angular.extend(defaultAccordionGroupOptions(), n);
                     if (n && !n.disabled) {
                         accordion.applyState(accordionGroup);
@@ -167,9 +169,9 @@
                     accordionGroup.header = results[0];
                     accordionGroup.body = results[1];
                     if (scope.options.open) {
-                        accordionGroup.show('show');
+                        accordionGroup.$animate('show', 'beforeOpen', 'animateOpen');
                     } else {
-                        accordionGroup.hide('hide');
+                        accordionGroup.$animate('hide', 'beforeHide', 'animateClose');
                     }
                     accordionGroup.header.on('click', function () {
                         if (!scope.options.disabled) {
@@ -180,7 +182,7 @@
                         });
                     });
                     accordion.addGroup(accordionGroup);
-                })
+                });
 
             }
         };
