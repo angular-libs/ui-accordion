@@ -462,8 +462,8 @@ module.exports = function (grunt) {
     'uglify',
     //'filerev',
     'usemin',
-    'htmlmin',
-    'angular_architecture_graph'
+    'htmlmin'//,
+    //'angular_architecture_graph'
   ]);
 
   grunt.registerTask('architecture-graph', [
