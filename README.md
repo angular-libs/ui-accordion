@@ -47,3 +47,7 @@
 angular.module('myApp',['uiAccordion']);
 ```
 ### for more [Click me](http://kuldeepkeshwar.github.io/ui-accordion)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kuldeepkeshwar/ui-accordion/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
