@@ -41,7 +41,7 @@
     "karma-phantomjs-launcher": "*"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4.2.2"
   },
   "dependencies": {
     "codecov.io": "^0.1.6",
