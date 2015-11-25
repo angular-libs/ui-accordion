@@ -51,3 +51,7 @@ angular.module('myApp',['uiAccordion']);
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kuldeepkeshwar/ui-accordion/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/angular-libs/ui-accordion/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
