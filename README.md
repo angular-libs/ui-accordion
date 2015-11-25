@@ -6,6 +6,7 @@
 <a href="https://codeclimate.com/github/kuldeepkeshwar/ui-accordion"><img src="https://codeclimate.com/github/kuldeepkeshwar/ui-accordion/badges/gpa.svg" /></a>
 <a href="https://codeclimate.com/github/kuldeepkeshwar/ui-accordion/coverage"><img src="https://codeclimate.com/github/kuldeepkeshwar/ui-accordion/badges/coverage.svg" /></a>
 [![Bower version](https://badge.fury.io/bo/ui-accordion.svg)](https://badge.fury.io/bo/ui-accordion)
+![codecov.io](https://codecov.io/github/angular-libs/ui-accordion/branch.svg?branch=master)
 ## simple accordion in angular js
 
 #Installing
