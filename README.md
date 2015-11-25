@@ -2,7 +2,7 @@
 # ui-accordion
 [![Build Status](https://travis-ci.org/kuldeepkeshwar/ui-accordion.svg?branch=master)](https://travis-ci.org/kuldeepkeshwar/ui-accordion)
 [![Dependency Status](https://gemnasium.com/kuldeepkeshwar/ui-accordion.svg)](https://gemnasium.com/kuldeepkeshwar/ui-accordion)
-[![codecov.io](https://codecov.io/github/kuldeepkeshwar/ui-accordion/coverage.svg?branch=master)](https://codecov.io/github/kuldeepkeshwar/ui-accordion?branch=master)
+[![codecov.io](https://codecov.io/github/angular-libs/ui-accordion/coverage.svg?branch=master)](https://codecov.io/github/angular-libs/ui-accordion?branch=master)
 <a href="https://codeclimate.com/github/kuldeepkeshwar/ui-accordion"><img src="https://codeclimate.com/github/kuldeepkeshwar/ui-accordion/badges/gpa.svg" /></a>
 <a href="https://codeclimate.com/github/kuldeepkeshwar/ui-accordion/coverage"><img src="https://codeclimate.com/github/kuldeepkeshwar/ui-accordion/badges/coverage.svg" /></a>
 [![Bower version](https://badge.fury.io/bo/ui-accordion.svg)](https://badge.fury.io/bo/ui-accordion)
