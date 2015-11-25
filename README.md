@@ -8,7 +8,9 @@
 [![Bower version](https://badge.fury.io/bo/ui-accordion.svg)](https://badge.fury.io/bo/ui-accordion)
 [![Issue Stats](http://issuestats.com/github/kuldeepkeshwar/ui-accordion/badge/pr)](http://issuestats.com/github/kuldeepkeshwar/ui-accordion)
 [![Issue Stats](http://issuestats.com/github/kuldeepkeshwar/ui-accordion/badge/issue)](http://issuestats.com/github/kuldeepkeshwar/ui-accordion)
+
 ![codecov.io](https://codecov.io/github/angular-libs/ui-accordion/branch.svg?branch=master)
+
 ## simple accordion in angular js
 
 #Installing
