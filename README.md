@@ -2,10 +2,15 @@
 # ui-accordion
 [![Build Status](https://travis-ci.org/angular-libs/ui-accordion.svg?branch=master)](https://travis-ci.org/angular-libs/ui-accordion)
 [![Dependency Status](https://gemnasium.com/kuldeepkeshwar/ui-accordion.svg)](https://gemnasium.com/kuldeepkeshwar/ui-accordion)
-[![codecov.io](https://codecov.io/github/kuldeepkeshwar/ui-accordion/coverage.svg?branch=master)](https://codecov.io/github/kuldeepkeshwar/ui-accordion?branch=master)
+[![codecov.io](https://codecov.io/github/angular-libs/ui-accordion/coverage.svg?branch=master)](https://codecov.io/github/angular-libs/ui-accordion?branch=master)
 <a href="https://codeclimate.com/github/kuldeepkeshwar/ui-accordion"><img src="https://codeclimate.com/github/kuldeepkeshwar/ui-accordion/badges/gpa.svg" /></a>
 <a href="https://codeclimate.com/github/kuldeepkeshwar/ui-accordion/coverage"><img src="https://codeclimate.com/github/kuldeepkeshwar/ui-accordion/badges/coverage.svg" /></a>
 [![Bower version](https://badge.fury.io/bo/ui-accordion.svg)](https://badge.fury.io/bo/ui-accordion)
+[![Issue Stats](http://issuestats.com/github/kuldeepkeshwar/ui-accordion/badge/pr)](http://issuestats.com/github/kuldeepkeshwar/ui-accordion)
+[![Issue Stats](http://issuestats.com/github/kuldeepkeshwar/ui-accordion/badge/issue)](http://issuestats.com/github/kuldeepkeshwar/ui-accordion)
+
+![codecov.io](https://codecov.io/github/angular-libs/ui-accordion/branch.svg?branch=master)
+
 ## simple accordion in angular js
 
 #Installing
@@ -46,8 +51,8 @@
 ```javascript
 angular.module('myApp',['uiAccordion']);
 ```
-### for more [Click me](http://kuldeepkeshwar.github.io/ui-accordion)
+### for more [Click me](http://angular-libs.github.io/ui-accordion)
 
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kuldeepkeshwar/ui-accordion/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/angular-libs/ui-accordion/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
