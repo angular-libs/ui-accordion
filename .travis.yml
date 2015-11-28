@@ -11,5 +11,5 @@ before_script:
 
 after_script:
   - 'grunt default'
-  - 'codecov coverage/cobertura/cobertura-coverage.xml --token=691a6715-555f-490c-9808-85c3ea4e0430'
+  - 'codecov coverage/cobertura/cobertura-coverage.xml --token=1f1d262f-9c91-4e98-a340-89e4102cd423'
   - 'CODECLIMATE_REPO_TOKEN=898715e040e240acd84e0bb88a870c5f14015f467c6df413cfd50aebfe0e99a6 codeclimate-test-reporter < coverage/lcov/lcov.info'
