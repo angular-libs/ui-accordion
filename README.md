@@ -1,6 +1,6 @@
 
 # ui-accordion
-[![Build Status](https://travis-ci.org/kuldeepkeshwar/ui-accordion.svg?branch=master)](https://travis-ci.org/kuldeepkeshwar/ui-accordion)
+[![Build Status](https://travis-ci.org/angular-libs/ui-accordion.svg?branch=master)](https://travis-ci.org/angular-libs/ui-accordion)
 [![Dependency Status](https://gemnasium.com/kuldeepkeshwar/ui-accordion.svg)](https://gemnasium.com/kuldeepkeshwar/ui-accordion)
 [![codecov.io](https://codecov.io/github/kuldeepkeshwar/ui-accordion/coverage.svg?branch=master)](https://codecov.io/github/kuldeepkeshwar/ui-accordion?branch=master)
 <a href="https://codeclimate.com/github/kuldeepkeshwar/ui-accordion"><img src="https://codeclimate.com/github/kuldeepkeshwar/ui-accordion/badges/gpa.svg" /></a>
