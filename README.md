@@ -1,13 +1,13 @@
 
 # ui-accordion
 [![Build Status](https://travis-ci.org/angular-libs/ui-accordion.svg?branch=master)](https://travis-ci.org/angular-libs/ui-accordion)
-[![Dependency Status](https://gemnasium.com/kuldeepkeshwar/ui-accordion.svg)](https://gemnasium.com/kuldeepkeshwar/ui-accordion)
+[![Dependency Status](https://gemnasium.com/angular-libs/ui-accordion.svg)](https://gemnasium.com/angular-libs/ui-accordion)
 [![codecov.io](https://codecov.io/github/angular-libs/ui-accordion/coverage.svg?branch=master)](https://codecov.io/github/angular-libs/ui-accordion?branch=master)
-<a href="https://codeclimate.com/github/kuldeepkeshwar/ui-accordion"><img src="https://codeclimate.com/github/kuldeepkeshwar/ui-accordion/badges/gpa.svg" /></a>
-<a href="https://codeclimate.com/github/kuldeepkeshwar/ui-accordion/coverage"><img src="https://codeclimate.com/github/kuldeepkeshwar/ui-accordion/badges/coverage.svg" /></a>
+<a href="https://codeclimate.com/github/angular-libs/ui-accordion"><img src="https://codeclimate.com/github/angular-libs/ui-accordion/badges/gpa.svg" /></a>
+<a href="https://codeclimate.com/github/angular-libs/ui-accordion/coverage"><img src="https://codeclimate.com/github/angular-libs/ui-accordion/badges/coverage.svg" /></a>
 [![Bower version](https://badge.fury.io/bo/ui-accordion.svg)](https://badge.fury.io/bo/ui-accordion)
-[![Issue Stats](http://issuestats.com/github/kuldeepkeshwar/ui-accordion/badge/pr)](http://issuestats.com/github/kuldeepkeshwar/ui-accordion)
-[![Issue Stats](http://issuestats.com/github/kuldeepkeshwar/ui-accordion/badge/issue)](http://issuestats.com/github/kuldeepkeshwar/ui-accordion)
+[![Issue Stats](http://issuestats.com/github/angular-libs/ui-accordion/badge/pr)](http://issuestats.com/github/angular-libs/ui-accordion)
+[![Issue Stats](http://issuestats.com/github/angular-libs/ui-accordion/badge/issue)](http://issuestats.com/github/angular-libs/ui-accordion)
 
 ![codecov.io](https://codecov.io/github/angular-libs/ui-accordion/branch.svg?branch=master)
 
@@ -23,8 +23,8 @@
 
 ##### You can use rawgit.com's cdn url to access the files in the Bower repository. These files are hosted by MaxCDN. Just alter the version as you need.
 
-* https://rawgit.com/kuldeepkeshwar/ui-accordion/master/dist/scripts/ui-accordion.js
-* https://rawgit.com/kuldeepkeshwar/ui-accordion/master/dist/scripts/ui-accordion.min.js
+* https://rawgit.com/angular-libs/ui-accordion/master/dist/scripts/ui-accordion.js
+* https://rawgit.com/angular-libs/ui-accordion/master/dist/scripts/ui-accordion.min.js
 
 ## Usage :
 
