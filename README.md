@@ -1,5 +1,6 @@
 
 # ui-accordion
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 [![Build Status](https://travis-ci.org/angular-libs/ui-accordion.svg?branch=master)](https://travis-ci.org/angular-libs/ui-accordion)
 [![Dependency Status](https://gemnasium.com/angular-libs/ui-accordion.svg)](https://gemnasium.com/angular-libs/ui-accordion)
 [![codecov.io](https://codecov.io/github/angular-libs/ui-accordion/coverage.svg?branch=master)](https://codecov.io/github/angular-libs/ui-accordion?branch=master)
