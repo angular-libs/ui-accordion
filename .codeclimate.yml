@@ -1,8 +1,19 @@
-languages:
-  Ruby: true
-  JavaScript: true
-  PHP: true
-  Python: true
+---
+engines:
+  csslint:
+    enabled: true
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
+ratings:
+  paths:
+  - "**.css"
+  - "**.js"
+  - "**.jsx"
 exclude_paths:
-- "dist/*"
+- "dist/**.*"
 - "examples/*"
+- "test/*"
+- "*.*"
+- "app/**.html"
