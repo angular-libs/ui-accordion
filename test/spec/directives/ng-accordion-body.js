@@ -12,7 +12,7 @@ describe('Directive: ngAccordionBody', function () {
     scope = $rootScope.$new();
   }));
 
-  xit('should make hidden element visible', inject(function ($compile) {
+  it('should make hidden element visible', inject(function ($compile) {
     element = angular.element('<ng-accordion-body></ng-accordion-body>');
     element = $compile(element)(scope);
     expect(element.text()).toBe('this is the ngAccordionBody directive');
