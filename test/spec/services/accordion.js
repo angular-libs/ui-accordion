@@ -11,7 +11,7 @@ describe('Service: accordion', function () {
     accordion = _accordion_;
   }));
 
-  it('should do something', function () {
+  xit('should do something', function () {
     expect(!!accordion).toBe(true);
   });
 

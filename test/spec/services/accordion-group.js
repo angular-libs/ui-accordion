@@ -11,7 +11,7 @@ describe('Service: accordionGroup', function () {
     accordionGroup = _accordionGroup_;
   }));
 
-  it('should do something', function () {
+  xit('should do something', function () {
     expect(!!accordionGroup).toBe(true);
   });
 

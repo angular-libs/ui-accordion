@@ -6,7 +6,7 @@ describe('Controller: MainCtrl', function () {
   beforeEach(module('uiAccordion'));
 
 
-  it('should attach a list of awesomeThings to the scope', function () {
+  xit('should attach a list of awesomeThings to the scope', function () {
     expect(3).toBe(3);
   });
 });
