@@ -11,8 +11,9 @@ describe('Service: accordionGroup', function () {
     accordionGroup = _accordionGroup_;
   }));
 
-  xit('should do something', function () {
-    expect(!!accordionGroup).toBe(true);
+  it('should create accordion group object', function () {
+    var grp=accordionGroup.createAccordionGrp();
+    expect(grp.constructor.name).toBe("AccordionGroup");
   });
 
 });
