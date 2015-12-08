@@ -181,7 +181,6 @@ angular.module('uiAccordion')
       return this.groups;
     };
     Accordion.prototype.applyState = function (group) {
-        console.log(group.body[0].innerHTML,group.options.open);
       if (group) {
         if (group.options.open) {
           group.$animate('slideDown', 'beforeOpen', 'animateOpen');
@@ -193,19 +192,16 @@ angular.module('uiAccordion')
 
     };
     Accordion.prototype.closeOthers = function (group) {
-        console.log(this.options.closeOthers);
-        if (this.options.closeOthers) {
-            for (var a = 0; a < this.groups.length; a++) {
-              if (group === this.groups[a]) {
+      if (this.options.closeOthers) {
+        for (var a = 0; a < this.groups.length; a++) {
+          if (group === this.groups[a]) {
 
-              } else {
-                  this.groups[a].options.open = false;
-                  this.groups[a].$animate('slideUp', 'beforeHide', 'animateClose');
-                  console.log(this.groups[a].body[0].innerHTML,this.groups[a].options.open);
-
-              }
-            }
+          } else {
+              this.groups[a].options.open = false;
+              this.groups[a].$animate('slideUp', 'beforeHide', 'animateClose');
+          }
         }
+      }
     };
 
       return {
