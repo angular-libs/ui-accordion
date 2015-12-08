@@ -5,7 +5,7 @@
 [![Dependency Status](https://gemnasium.com/angular-libs/ui-accordion.svg)](https://gemnasium.com/angular-libs/ui-accordion)
 [![codecov.io](https://codecov.io/github/angular-libs/ui-accordion/coverage.svg?branch=master)](https://codecov.io/github/angular-libs/ui-accordion?branch=master)
 <a href="https://codeclimate.com/github/angular-libs/ui-accordion"><img src="https://codeclimate.com/github/angular-libs/ui-accordion/badges/gpa.svg" /></a>
-<a href="https://codeclimate.com/github/angular-libs/ui-accordion/coverage"><img src="https://codeclimate.com/github/angular-libs/ui-accordion/badges/coverage.svg" /></a>
+[![Coverage Status](https://coveralls.io/repos/angular-libs/ui-accordion/badge.svg?branch=master&service=github)](https://coveralls.io/github/angular-libs/ui-accordion?branch=master)
 [![Bower version](https://badge.fury.io/bo/ui-accordion.svg)](https://badge.fury.io/bo/ui-accordion)
 [![Issue Stats](http://issuestats.com/github/angular-libs/ui-accordion/badge/pr)](http://issuestats.com/github/angular-libs/ui-accordion)
 [![Issue Stats](http://issuestats.com/github/angular-libs/ui-accordion/badge/issue)](http://issuestats.com/github/angular-libs/ui-accordion)
