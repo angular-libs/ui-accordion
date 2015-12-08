@@ -38,64 +38,7 @@ angular.module('uiAccordion')
       };
   });
 
-'use strict';
-
-/**
- * @ngdoc directive
- * @name uiAccordion.directive:ngAccordionGroup
- * @description
- * # ngAccordionGroup
- */
-angular.module('uiAccordion')
-  .directive('ngAccordionGroup', function (accordionGroup,$q,$timeout) {
-      return {
-          require: ['^ngAccordion', 'ngAccordionGroup'],
-          restrict: 'EA',
-          controller: 'NgAccordionGroupCtrl',
-          scope: {
-              options: '='
-          },
-          link: function (scope, element, attrs, controllers) {
-              var accordionCtrl, controller, accordion, _accordionGroup;
-              controller = controllers[1];
-              accordionCtrl = controllers[0];
-              accordion = accordionCtrl.accordion;
-              _accordionGroup = accordionGroup.createAccordionGrp();
-              if (!scope.options) {
-                  scope.options = accordionGroup.defaultAccordionGroupOptions();
-              }
-              _accordionGroup.options = angular.extend(accordionGroup.defaultAccordionGroupOptions(), scope.options);
-
-              scope.$watchCollection('options', function (n) {
-                  _accordionGroup.options = angular.extend(accordionGroup.defaultAccordionGroupOptions(), n);
-                  if (n && !n.disabled) {
-                      accordion.applyState(_accordionGroup);
-                  }
-              }, true);
-
-              $q.all([controller.getHeaderElement(), controller.getBodyElement()]).then(function (results) {
-                  _accordionGroup.header = results[0];
-                  _accordionGroup.body = results[1];
-                  if (scope.options.open) {
-                      _accordionGroup.$animate('show', 'beforeOpen', 'animateOpen');
-                  } else {
-                      _accordionGroup.$animate('hide', 'beforeHide', 'animateClose');
-                  }
-                  _accordionGroup.header.on('click', function () {
-                      if (!_accordionGroup.options.disabled) {
-                          _accordionGroup.options.open = !_accordionGroup.options.open;
-                          accordion.applyState(_accordionGroup);
-                      }
-                      $timeout(function () {
-                          scope.$apply();
-                      });
-                  });
-                  accordion.addGroup(_accordionGroup);
-              });
-
-          }
-      };
-  });
+'use strict';/** * @ngdoc directive * @name uiAccordion.directive:ngAccordionGroup * @description * # ngAccordionGroup */angular.module('uiAccordion')  .directive('ngAccordionGroup', function (accordionGroup,$q,$timeout) {      return {          require: ['^ngAccordion', 'ngAccordionGroup'],          restrict: 'EA',          controller: 'NgAccordionGroupCtrl',          scope: {              options: '='          },          link: function (scope, element, attrs, controllers) {              var accordionCtrl, controller, accordion, _accordionGroup;              controller = controllers[1];              accordionCtrl = controllers[0];              accordion = accordionCtrl.accordion;              _accordionGroup = accordionGroup.createAccordionGrp();              if (!scope.options) {                  scope.options = accordionGroup.defaultAccordionGroupOptions();              }              _accordionGroup.options = angular.extend(accordionGroup.defaultAccordionGroupOptions(), scope.options);              scope.$watchCollection('options', function (n) {                  _accordionGroup.options = angular.extend(accordionGroup.defaultAccordionGroupOptions(), n);                  if (n && !n.disabled) {                      accordion.applyState(_accordionGroup);                  }              }, true);              $q.all([controller.getHeaderElement(), controller.getBodyElement()]).then(function (results) {                  _accordionGroup.header = results[0];                  _accordionGroup.body = results[1];                  if (scope.options.open) {                      _accordionGroup.$animate('show', 'beforeOpen', 'animateOpen');                  } else {                      _accordionGroup.$animate('hide', 'beforeHide', 'animateClose');                  }                  _accordionGroup.header.on('click', function () {                      if (!_accordionGroup.options.disabled) {                          _accordionGroup.options.open = !_accordionGroup.options.open;                          accordion.applyState(_accordionGroup);                      }                      $timeout(function () {                          scope.$apply();                      });                  });                  accordion.addGroup(_accordionGroup);              });          }      };  });
 'use strict';
 
 /**
@@ -238,6 +181,7 @@ angular.module('uiAccordion')
       return this.groups;
     };
     Accordion.prototype.applyState = function (group) {
+        console.log(group.body[0].innerHTML,group.options.open);
       if (group) {
         if (group.options.open) {
           group.$animate('slideDown', 'beforeOpen', 'animateOpen');
@@ -249,16 +193,19 @@ angular.module('uiAccordion')
 
     };
     Accordion.prototype.closeOthers = function (group) {
-      if (this.options.closeOthers) {
-        for (var a = 0; a < this.groups.length; a++) {
-          if (group === this.groups[a]) {
+        console.log(this.options.closeOthers);
+        if (this.options.closeOthers) {
+            for (var a = 0; a < this.groups.length; a++) {
+              if (group === this.groups[a]) {
 
-          } else {
-              this.groups[a].options.open = false;
-              this.groups[a].$animate('slideUp', 'beforeHide', 'animateClose');
-          }
+              } else {
+                  this.groups[a].options.open = false;
+                  this.groups[a].$animate('slideUp', 'beforeHide', 'animateClose');
+                  console.log(this.groups[a].body[0].innerHTML,this.groups[a].options.open);
+
+              }
+            }
         }
-      }
     };
 
       return {
