@@ -10,8 +10,7 @@
 [![Issue Stats](http://issuestats.com/github/angular-libs/ui-accordion/badge/pr)](http://issuestats.com/github/angular-libs/ui-accordion)
 [![Issue Stats](http://issuestats.com/github/angular-libs/ui-accordion/badge/issue)](http://issuestats.com/github/angular-libs/ui-accordion)
 
-![codecov.io](https://codecov.io/github/angular-libs/ui-accordion/branch.svg?branch=master)
-
+<object type="image/svg+xml" data="https://codecov.io/github/angular-libs/ui-accordion/branch.svg?branch=master"></object>
 ## simple accordion in angular js
 
 #Installing

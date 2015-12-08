@@ -38,7 +38,8 @@ angular.module('uiAccordion')
           if (group === this.groups[a]) {
 
           } else {
-            this.groups[a].hide('slideUp', 'beforeHide', 'animateClose');
+              this.groups[a].options.open = false;
+              this.groups[a].$animate('slideUp', 'beforeHide', 'animateClose');
           }
         }
       }

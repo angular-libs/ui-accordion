@@ -82,8 +82,9 @@ angular.module('uiAccordion')
                       _accordionGroup.$animate('hide', 'beforeHide', 'animateClose');
                   }
                   _accordionGroup.header.on('click', function () {
-                      if (!scope.options.disabled) {
-                          scope.options.open = !scope.options.open;
+                      if (!_accordionGroup.options.disabled) {
+                          _accordionGroup.options.open = !_accordionGroup.options.open;
+                          accordion.applyState(_accordionGroup);
                       }
                       $timeout(function () {
                           scope.$apply();
@@ -95,7 +96,6 @@ angular.module('uiAccordion')
           }
       };
   });
-
 'use strict';
 
 /**
@@ -254,7 +254,8 @@ angular.module('uiAccordion')
           if (group === this.groups[a]) {
 
           } else {
-            this.groups[a].hide('slideUp', 'beforeHide', 'animateClose');
+              this.groups[a].options.open = false;
+              this.groups[a].$animate('slideUp', 'beforeHide', 'animateClose');
           }
         }
       }
