@@ -52,7 +52,7 @@
 angular.module('myApp',['uiAccordion']);
 ```
 ### for more [Click me](http://angular-libs.github.io/ui-accordion)
-
+[![Analytics](https://ga-beacon.appspot.com/UA-71806888-1/ui-accordion/)](https://github.com/angular-libs/ui-accordion)
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/angular-libs/ui-accordion/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
