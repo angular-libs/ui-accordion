@@ -11,7 +11,7 @@
   },
   "appPath": "app",
   "moduleName": "uiAccordion",
-  "homepage": "https://github.com/kuldeepkeshwar/ui-accordion",
+  "homepage": "https://github.com/angular-libs/ui-accordion",
   "authors": [
     "Kuldeep Keshwar <kuldeepkeshwar@gmail.com>"
   ],
@@ -23,7 +23,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/kuldeepkeshwar/ui-accordion.git"
+    "url": "git://github.com/angular-libs/ui-accordion.git"
   },
   "license": "MIT",
   "ignore": [
