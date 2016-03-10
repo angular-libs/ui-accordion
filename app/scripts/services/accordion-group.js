@@ -13,7 +13,9 @@ angular.module('uiAccordion')
     }
     function noopPromise() {
       var def = $q.defer();
-      def.resolve();
+      $timeout(function(){
+        def.resolve('');
+      });
       return def.promise;
     }
 
