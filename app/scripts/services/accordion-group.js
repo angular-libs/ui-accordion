@@ -8,7 +8,7 @@
  * Service in the uiAccordion.
  */
 angular.module('uiAccordion')
-  .service('accordionGroup', function ($q,$log) {
+  .service('accordionGroup', function ($q,$log,$timeout) {
     function AccordionGroup() {
     }
     function noopPromise() {

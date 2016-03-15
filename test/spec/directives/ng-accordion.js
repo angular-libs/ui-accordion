@@ -37,6 +37,7 @@ describe('Directive: ngAccordion', function () {
 
         var grps = angular.element(document.body).find('[ng-accordion-group]');
         grps.eq(0).find('[ng-accordion-heading]').click();
+        timeout.flush();
         scope.$digest();
         expect(grps.eq(0).find('[ng-accordion-body]').is(':visible')).toBe(true);
         expect(grps.eq(1).find('[ng-accordion-body]').is(':visible')).toBe(false);
@@ -70,6 +71,7 @@ describe('Directive: ngAccordion', function () {
         expect(grps.eq(2).find('[ng-accordion-body]').is(':visible')).toBe(false);
 
         grps.eq(0).find('[ng-accordion-heading]').triggerHandler('click'); //expending first
+        timeout.flush();
         scope.$digest();
         expect(grps.eq(0).find('[ng-accordion-body]').is(':visible')).toBe(true);
         expect(grps.eq(1).find('[ng-accordion-body]').is(':visible')).toBe(false);
@@ -102,12 +104,14 @@ describe('Directive: ngAccordion', function () {
         expect(grps.eq(2).find('[ng-accordion-body]').is(':visible')).toBe(false);
 
         grps.eq(0).find('[ng-accordion-heading]').triggerHandler('click'); //expending first
+        timeout.flush();
         scope.$digest();
         expect(grps.eq(0).find('[ng-accordion-body]').is(':visible')).toBe(true);
         expect(grps.eq(1).find('[ng-accordion-body]').is(':visible')).toBe(false);
         expect(grps.eq(2).find('[ng-accordion-body]').is(':visible')).toBe(false);
 
         grps.eq(1).find('[ng-accordion-heading]').triggerHandler('click');//expending second
+        timeout.flush();
         scope.$digest();
         expect(grps.eq(0).find('[ng-accordion-body]').is(':visible')).toBe(true);
         expect(grps.eq(1).find('[ng-accordion-body]').is(':visible')).toBe(true);
