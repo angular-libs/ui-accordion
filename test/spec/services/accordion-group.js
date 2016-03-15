@@ -6,10 +6,11 @@ describe('Service: accordionGroup', function () {
   beforeEach(module('uiAccordion'));
 
   // instantiate service
-    var accordionGroup, _q, $rootScope;
-    beforeEach(inject(function (_accordionGroup_, $q, _$rootScope_) {
+    var accordionGroup, _q, $rootScope,timeout;
+    beforeEach(inject(function (_accordionGroup_, $q, _$rootScope_,$timeout) {
     accordionGroup = _accordionGroup_;
         _q = $q;
+        timeout=$timeout;
         $rootScope = _$rootScope_;
   }));
 
@@ -39,6 +40,7 @@ describe('Service: accordionGroup', function () {
 
         grp.$animate(animateFn, 'beforeOpen', 'animateOpen');
         $rootScope.$apply();
+        timeout.flush();
         expect(opts.animateOpen).toHaveBeenCalledWith(animateFn);
 
     });
@@ -71,11 +73,13 @@ describe('Service: accordionGroup', function () {
 
         grp.$animate('hide', 'beforeHide', 'animateClose');
         $rootScope.$apply();
+        timeout.flush();
         expect(grp.body.is(':visible')).toBe(false);
 
 
         grp.$animate('show', 'beforeOpen', 'animateOpen');
         $rootScope.$apply();
+        timeout.flush();
         expect(grp.body.is(':visible')).toBe(true);
     });
 });
