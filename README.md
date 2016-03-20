@@ -11,6 +11,7 @@
 [![Issue Stats](http://issuestats.com/github/angular-libs/ui-accordion/badge/issue)](http://issuestats.com/github/angular-libs/ui-accordion)
 [![ReviewNinja](https://app.review.ninja/43959757/badge)](https://app.review.ninja/angular-libs/ui-accordion)
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/angular-libs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/06412233c0e64d9c8133432c2869f69b)](https://www.codacy.com/app/kuldeepkeshwar/ui-accordion)
 
 
 -![codecov.io](https://codecov.io/github/angular-libs/ui-accordion/branch.svg?branch=master)
