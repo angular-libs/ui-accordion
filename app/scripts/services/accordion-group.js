@@ -39,7 +39,9 @@ angular.module('uiAccordion')
           beforeOpen: noopPromise,
           beforeHide: noopPromise,
           animateOpen: function (animationFn) {
-            this.body[animationFn]('slow');
+            if(this.body){
+              this.body[animationFn]('slow');
+            }
           },
           animateClose: function (animationFn) {
             this.body[animationFn]();
